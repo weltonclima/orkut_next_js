@@ -1,6 +1,9 @@
 import {
   Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Center, Flex, Heading,
-  Input, InputGroup, InputLeftElement, Text, FlexProps, Img, useBreakpoint, useBreakpointValue, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, useDisclosure, IconButton, Icon, Divider, List, ListItem, HStack
+  Input, InputGroup, InputLeftElement, Text, FlexProps, Img,
+  useBreakpointValue, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, 
+  DrawerHeader, DrawerBody, useDisclosure, IconButton, Icon, Divider, List, 
+  ListItem, HStack
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiMenuLine } from "react-icons/ri";
@@ -82,7 +85,7 @@ export function Header({ ...rest }: HeaderProps) {
             </Breadcrumb>
             <Box>
               <InputGroup >
-                <InputLeftElement children={<IoSearchSharp size="20" color="white" />} />
+                <InputLeftElement children={<Icon as={IoSearchSharp}  size="20" color="white"/>} />
                 <Input
                   borderRadius="34px"
                   border="0"
