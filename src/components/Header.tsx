@@ -1,8 +1,8 @@
 import {
   Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Center, Flex, Heading,
   Input, InputGroup, InputLeftElement, Text, FlexProps, Img,
-  useBreakpointValue, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, 
-  DrawerHeader, DrawerBody, useDisclosure, IconButton, Icon, Divider, List, 
+  useBreakpointValue, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton,
+  DrawerHeader, DrawerBody, useDisclosure, IconButton, Icon, Divider, List,
   ListItem, HStack
 } from "@chakra-ui/react";
 import Link from "next/link";
@@ -85,7 +85,9 @@ export function Header({ ...rest }: HeaderProps) {
             </Breadcrumb>
             <Box>
               <InputGroup >
-                <InputLeftElement children={<Icon as={IoSearchSharp}  size="20" color="white"/>} />
+                <InputLeftElement>
+                  <IoSearchSharp size="20" color="white" />
+                </InputLeftElement>
                 <Input
                   borderRadius="34px"
                   border="0"
@@ -119,9 +121,9 @@ export function Header({ ...rest }: HeaderProps) {
                 <DrawerHeader></DrawerHeader>
 
                 <DrawerBody
-                fontSize="1.3rem"
-                lineHeight="1.6rem"
-                color="blue.500"
+                  fontSize="1.3rem"
+                  lineHeight="1.6rem"
+                  color="blue.500"
                 >
                   <Center mb="1.43rem">
                     <Img src="assets/avatar.svg" w="14.43rem" />
