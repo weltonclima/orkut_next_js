@@ -1,15 +1,20 @@
 import { Button, Center, Input, Text, FlexProps, Flex } from "@chakra-ui/react";
+import { useRouter } from "next/dist/client/router";
+import { route } from "next/dist/next-server/server/router";
+import Link from "next/link";
+
 type LoginProps = FlexProps;
 
 export function Login({ ...rest }: LoginProps) {
+  const router = useRouter()
   return (
-    <Flex flex="0.5" textAlign="center" flexDir="column" {...rest}>
+    <Flex flex="1" textAlign="center" flexDir="column" {...rest}>
       <Center
         bg="blue.100"
         borderRadius="8px"
         flexDirection="column"
-        flex="1"
-        m={["0 1rem 1rem 1rem","0 1rem 1rem 1rem","0 0 .75rem 0"]}
+        flex="2"
+        m={["0 1rem 1rem 1rem", "0 1rem 1rem 1rem", "0 0 .75rem 0"]}
         p="4.37rem"
       >
         <Text
@@ -26,16 +31,28 @@ export function Login({ ...rest }: LoginProps) {
           borderColor="#C5C6CA"
           bg="white"
           placeholder="Usuário"
+          mb=".5rem"
+          size="sm"
+        />
+        <Input
+          type="password"
+          border="1px"
+          borderColor="#C5C6CA"
+          bg="white"
+          placeholder="Senha"
           mb="1rem"
+          size="sm"
         />
         <Button
           w="100%"
           bg="blue.500"
           color="white"
+          size="sm"
           _hover={{
             bg: "white",
             color: "blue.500"
           }}
+          onClick={()=> router.push("/home")}
         >
           Login
         </Button>
@@ -44,9 +61,9 @@ export function Login({ ...rest }: LoginProps) {
         bg="blue.100"
         flexDirection="column"
         borderRadius="8px"
-        flex="0.5"
+        flex="1"
         py="1.25rem"
-        mx={["1rem","1rem","0"]}
+        mx={["1rem", "1rem", "0"]}
       >
         <Text
           fontSize=".87rem"
@@ -59,7 +76,7 @@ export function Login({ ...rest }: LoginProps) {
           lineHeight="1.03rem"
           color="blue.500"
         >
-          ENTRAR JÁ
+          <Link href="/home">ENTRAR JÁ</Link>
         </Text>
       </Center>
     </Flex>

@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Heading, Input, Stack, Text } from '@chakra-ui/react'
+import { Center, Flex, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import { Login } from '../components/Login'
 import { Logo } from '../components/Logo'
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Orkut</title>
+        <title>Orkut | Login</title>
       </Head>
       <Flex
         w="100vw"
