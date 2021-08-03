@@ -137,6 +137,5 @@ export function Header({ ...rest }: HeaderProps) {
         }
       </Flex>
     </Flex>
-
   )
 }
