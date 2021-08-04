@@ -15,10 +15,10 @@ export function ListItem({
 }: ListItemProps) {
   return (
     <ChakraListItem>
-      <HStack spacing={["1rem", "1rem", ".5rem"]}>
-        <Img src={src} w={["30px", "30px", "16px"]} />
+      <HStack spacing={["1rem", "1rem", "1rem", ".5rem"]}>
+        <Img src={src} w={["30px", "30px", "30px", "16px"]} />
         {!!titleTwo ? (
-          <Flex flex="1" pr={["1rem","1rem","0"]} justify="space-between">
+          <Flex flex="1" pr={["1rem", "1rem", "1rem", "0"]} justify="space-between">
             <Text>{titleOne}</Text>
             <Text>{titleTwo}</Text>
           </Flex>

@@ -1,4 +1,4 @@
-import { Flex, Stack, Text, FlexProps, HStack } from "@chakra-ui/react";
+import { Flex, Stack, Text, FlexProps, HStack, Wrap } from "@chakra-ui/react";
 import { StatusBar } from "./StatusBar";
 type WelcomeProps = FlexProps;
 
@@ -6,7 +6,7 @@ export function Welcome({ ...rest }: WelcomeProps) {
   return (
     <Flex
       bg="white"
-      p="1.5rem"
+      p="1.5rem 1rem"
       flexDir="column"
       {...rest}
     >
@@ -25,7 +25,7 @@ export function Welcome({ ...rest }: WelcomeProps) {
           <b>Sorte de hoje:</b> O melhor profeta do futuro é o passado
         </Text>
       </Stack>
-      <HStack spacing="1.5rem">
+      <Wrap spacing={["1rem","1rem","1rem","1.5rem"]}>
         <StatusBar src="assets/recado.svg" count={0} >
           Recados
         </StatusBar>
@@ -50,7 +50,7 @@ export function Welcome({ ...rest }: WelcomeProps) {
         <StatusBar src="assets/heart.svg" count={0} bar={true}>
           Sexy
         </StatusBar>
-      </HStack>
+      </Wrap>
     </Flex>
   )
 }

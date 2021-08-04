@@ -10,7 +10,7 @@ export function PhotoIcon({
 }: PhotoIconProps) {
   return (
     <Box position="relative" {...rest}>
-      <Img src={src} w="84px" h="102px" fallbackSrc="/assets/avatar.svg" borderRadius="8px" />
+      <Img src={src} w="84px" h="102px" borderRadius="8px" />
       <Flex
         position="absolute"
         align="flex-end"

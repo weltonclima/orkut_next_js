@@ -6,7 +6,7 @@ export function WhatDoYou({ ...rest }: WhatDoYouProps) {
     <Flex
       {...rest}
       bg="white"
-      p="1.5rem"
+      p="1.5rem 1rem"
       flexDir="column"
     >
       <Text
@@ -23,6 +23,7 @@ export function WhatDoYou({ ...rest }: WhatDoYouProps) {
           fontSize=".75rem"
           lineHeight=".87rem"
           fontWeight="normal"
+          whiteSpace="normal"
           _hover={{ color: "blue.300", bg: "white" }}
         >
           Criar comunidade
@@ -33,6 +34,7 @@ export function WhatDoYou({ ...rest }: WhatDoYouProps) {
           fontSize=".75rem"
           lineHeight=".87rem"
           fontWeight="normal"
+          whiteSpace="normal"
           _hover={{ color: "blue.500", bg: "white" }}
         >
           Escrever depoimento
@@ -43,6 +45,7 @@ export function WhatDoYou({ ...rest }: WhatDoYouProps) {
           fontSize=".75rem"
           lineHeight=".87rem"
           fontWeight="normal"
+          whiteSpace="normal"
           _hover={{ color: "blue.500", bg: "white" }}
         >
           Deixar um scrap

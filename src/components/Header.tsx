@@ -13,10 +13,6 @@ export function Header({ ...rest }: HeaderProps) {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const isDrawerSidebar = useBreakpointValue({
     base: false,
-    md: true,
-  });
-  const isWideVersion = useBreakpointValue({
-    base: false,
     lg: true,
   });
 
@@ -76,41 +72,37 @@ export function Header({ ...rest }: HeaderProps) {
                 fontSize=".85rem"
                 lineHeight=".88rem"
               >
-                {isWideVersion &&
-                  <BreadcrumbItem >
-                    <Text
-                      color="blue.700"
-                      fontSize=".97rem"
-                      fontWeight="700"
-                      lineHeight="1.03rem"
-                    >
-                      welton.c.lima@gmail.com
-                    </Text>
-                  </BreadcrumbItem>
-                }
+                <BreadcrumbItem >
+                  <Text
+                    color="blue.700"
+                    fontSize=".97rem"
+                    fontWeight="700"
+                    lineHeight="1.03rem"
+                  >
+                    welton.c.lima@gmail.com
+                  </Text>
+                </BreadcrumbItem>
                 <BreadcrumbItem>
                   <BreadcrumbLink color="white" href="/">Sair</BreadcrumbLink>
                 </BreadcrumbItem>
               </Breadcrumb>
-              {isWideVersion &&
-                <Box>
-                  <InputGroup >
-                    <InputLeftElement>
-                      <IoSearchSharp size="20" color="white" />
-                    </InputLeftElement>
-                    <Input
-                      w="13rem"
-                      borderRadius="34px"
-                      border="0"
-                      color="white"
-                      _placeholder={{ color: "white" }}
-                      placeholder="Pesquisar no Orkut"
-                      type="text"
-                      bg="blue.600"
-                    />
-                  </InputGroup>
-                </Box>
-              }
+              <Box>
+                <InputGroup >
+                  <InputLeftElement>
+                    <IoSearchSharp size="20" color="white" />
+                  </InputLeftElement>
+                  <Input
+                    w="13rem"
+                    borderRadius="34px"
+                    border="0"
+                    color="white"
+                    _placeholder={{ color: "white" }}
+                    placeholder="Pesquisar no Orkut"
+                    type="text"
+                    bg="blue.600"
+                  />
+                </InputGroup>
+              </Box>
             </Center>
           </>
           :
